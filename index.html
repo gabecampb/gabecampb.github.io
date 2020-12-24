@@ -69,7 +69,15 @@ Future of the Project
 </h2>
 
 <p>
-In the future, I will continue to clean up the specification as much as possible, involving elaboration, reorganization, and making it more concise. Many minor changes to the specification will be made, but the instructions will almost certainly not be changed. I have been working on a virtual machine since the release of version 0.12, and it is mostly complete for version 0.19 but some of the code must now be updated for version 0.22. Forward compatibility for MABS programs will be ensured from version 1.0 onward, which I hope to release soon.
+I will continue to clean up the specification as much as possible, involving elaboration, reorganization, and making it more concise. Many minor changes to the specification will be made, but the bytecode set is almost complete and will change as little as possible in future versions. I have been working on a virtual machine since the release of version 0.12 which is mostly complete, save for a bit of updating to recent versions which I'm still working on. Forward compatibility for MABS programs will be ensured from version 1.0 onward, which I hope to release sometime soon.
+</p>
+    
+<h2>
+Upcoming Changes
+</h2>
+
+<p>
+In version 0.23, I will be polishing things and adding a few things that will improve on the bytecode set's graphics capabilities. Planned features for version 0.23 includes the ability to use instance ID as array indices in vertex shaders, and the addition of push constants (root constants in DX12 terminology; these can offer a more efficient alternative to uniform buffers when updating a small amount uniform data frequently/between draw calls). I also intend to better define some limits related to the amounts of data that can be input to shaders (such as the maximum amount of uniform data can be used), I will make file streams become private to the threads that create them, and there are more improvements that will be made. I'm also considering adding support for indirect rendering, AABB geometry for ray tracing, and intersection shaders.
 </p>
 
 <p>
