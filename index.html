@@ -42,7 +42,7 @@ Features
 • Mouse input<br>
 • Touchscreen input<br>
 • Graphics API (compatible with modern and previous generation graphics APIs)<br>
-• A shading language, represented in bytecode<br>
+• Shaders, represented in a bytecode format<br>
 • GPU computing<br>
 • Multi-threading and a high level of control over threads<br>
 • File I/O, including recognition and selection of connected drives<br>
@@ -77,7 +77,7 @@ Upcoming Changes
 </h2>
 
 <p>
-In version 0.23, I will be polishing things and adding a few things that will improve on the bytecode set's graphics capabilities. Planned features for version 0.23 includes the ability to use instance ID as array indices in vertex shaders, and the addition of push constants (root constants in DX12 terminology; these can offer a more efficient alternative to uniform buffers when updating a small amount uniform data frequently/between draw calls). I also intend to better define some limits related to the amounts of data that can be input to shaders (such as the maximum amount of uniform data can be used), I will make file streams become private to the threads that create them, and there are more improvements that will be made. I'm also considering adding support for indirect rendering, AABB geometry for ray tracing, and intersection shaders.
+In version 0.23, I will be polishing things and adding a few things that will improve on the bytecode set's graphics capabilities. Planned features for version 0.23 includes the ability to use instance ID as array indices in vertex shaders, the addition of push constants (root constants in DX12 terminology; these can offer a more efficient alternative to uniform buffers when updating a small amount of uniform data frequently/between draw calls), and the addition of indirect drawing commands. I also intend to better define some limits related to the amounts of data that can be input to shaders and make file streams private to the threads that opened them, and there are more improvements that will be made.
 </p>
 
 <p>
