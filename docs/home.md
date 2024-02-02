@@ -81,7 +81,7 @@ target platform for Pier. I eventually abandoned it due to it being poorly desig
 interpreter efficiency and I didn't like how separate it was from how computers
 actually work (it didn't even have interrupts!). It would have been suitable for
 software development, but not OS development, and I didn't like that. On top of
-all this, I started to structure my projects better since I started and
+all this, I started to structure my projects better than I used to, and
 refactoring code for a suboptimal project would've been a waste of time.
 
 I have done a few smaller things on the GBA in the past, nothing really of
