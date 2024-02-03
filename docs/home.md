@@ -28,7 +28,7 @@ While it is written in a systems programming language, it does not
 use C as most operating systems do. This has its downsides, and the compiler
 that I wrote with the foundation of no experience in compiler design may never
 be able to be considered a "decent" compiler, but as long as everything works
-they way it should then I am happy. Performance improvements will come later.
+the way it should then I am happy. Performance improvements will come later.
 As well as a probable compiler rewrite.
 
 Like most hobby OSes, the feature set will be far from being as
