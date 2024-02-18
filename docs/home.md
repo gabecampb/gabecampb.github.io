@@ -16,8 +16,8 @@ the emulator, assembler, compiler, and kernel will all be open-sourced on GitHub
 when I decide that they are all ready. That is, unless I can come up with some
 way to monetize the project and decide to do something else with it.
 
-Until I finish this, I will be working on new occasionally writing new articles
-for this site, as well as completing my studies at university.
+While I continue working on this, I will also be occasionally writing new
+articles for this site and completing my studies at university.
 
 ## EOF
 
