@@ -1,23 +1,24 @@
 ### assembler.mov
 
-Hello! My name is Gabriel Campbell, best classified as a systems programmer
-with interests in graphics programming, instruction sets, kernels/OS development,
-game engines, and botany.
+Hello! Welcome to my page.
 
-I have been working on an emulator for a system that implements my own RISC
+My name is Gabriel Campbell, a programmer with interests in graphics
+programming, instruction sets, and OS development.
+
+## Current Work
+
+I have been working on an emulator for a system that uses my own RISC
 instruction set. I'm also working on an OS to run on it, which is implemented
 in my own programming language. This is largely just for fun, but I intend to
 make some cool software for it eventually as well.
 
-## Current Plans
+The last feature that I still plan to design & implement for this system is an
+integrated GPU, which you will be able to run via OpenGL or software rendering.
+The goal for this project was to create a clean & portable SoC emulator using C.
 
-All of my goals right now simply involve finishing this system. The code for
-the emulator, assembler, compiler, and kernel will all be open-sourced on GitHub
-when I decide that they are all ready. That is, unless I can come up with some
-way to monetize the project and decide to do something else with it.
 
-While I continue working on this, I will also be occasionally writing new
-articles for this site and completing my studies at university.
+The code for my emulator, assembler, compiler, and kernel will all be
+open-sourced on GitHub when I decide that they are ready.
 
 ## EOF
 
