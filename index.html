@@ -30,6 +30,15 @@
 <p>Hello! Welcome to my page.</p>
 <p>My name is Gabriel Campbell, a programmer with interests in graphics
 programming, instruction sets, and OS development.</p>
+<h2>My Interests</h2>
+<p>I do hobby projects, some detailed below. These tend to involve
+low-level things like CPU architectures or graphics programming in some way. Two
+of my biggest projects were the Piculet platform/bytecode, and the platform I'm
+currently working on. I've dabbled in many computer things over time, including
+OpenGL, software renderers, game engines, GBA development, compilers, Haskell,
+and Python.</p>
+<p>Lately, I've been learning about OS development.</p>
+<p>Long-time Linux user, yearning for BSD.</p>
 <h2>Current Work</h2>
 <p>I have been working on an emulator for a system that uses my own RISC
 instruction set. I'm also working on an OS to run on it, which is implemented
@@ -40,8 +49,44 @@ integrated GPU, which you will be able to run via OpenGL or software rendering.
 The goal for this project was to create a clean &amp; portable SoC emulator using C.</p>
 <p>The code for my emulator, assembler, compiler, and kernel will all be
 open-sourced on GitHub when I decide that they are ready.</p>
-<h2>EOF</h2>
-<p>End of file, sorry. More coming in the future.</p>
-<p><a href="cat.jpg">My old cat.</a></p>
+<h2>Piculet</h2>
+<p>This bytecode was a project that I was working on between September 2018 to
+January 2023. I started it while in high school and eventually abandoned it to
+work on my current instruction set, which performs much faster and is better
+designed.</p>
+<p>The repo for the project is <a
+href="https://github.com/gabecampb/piculet">here</a>. Most importantly, the
+specification of the platform can be downloaded from
+<a href="https://github.com/gabecampb/piculet/blob/main/piculet029.pdf">here</a>.</p>
+<p>While you can tell some parts of it were designed by an amateur, Piculet was
+quite unique (and grand) in what it aimed to do. The goal was to create a
+platform that provides built-in, simple-as-possible interfaces for graphics,
+audio, networking, and more, through dedicated bytecode instructions. While they
+wouldn't be particularly optimized, you could absolutely develop 3D games on top
+of Piculet. If Piculet's whole feature set was implemented, you could even do
+ray tracing!</p>
+<h2>Zombie Game</h2>
+<p>This was a zombie FPS game which can be obtained <a href="https://github.com/gabecampb/zombie-game">here</a>.
+I developed it for a project in a university computer graphics course, and it is
+entertaining for a few minutes.</p>
+<p>It has some nice lighting, and basic animations on the zombie models. Tree
+leaves wave/deform in the wind by vertex displacement in the vertex shader.</p>
+<h2>FreeBuild</h2>
+<p>This was a <a href="https://github.com/gabecampb/freebuild">fun little project</a>
+I did, somewhat of a Roblox clone. It was a side project at the time so I didn't
+spend very long on it. Still fun to play around with, despite it being difficult
+to build things without a GUI.</p>
+<h2>Kernel</h2>
+<p>I am in the beginning stages of writing a kernel for my new ISA. As I work on
+it, I am heavily referencing and copying homework from the Linux kernel. Once it
+is mostly up and running, the idea is to make some kind of command-line OS for
+it.</p>
+<p>This project requires a from-scratch approach, which I find to be a very fun
+challenge. There is no C in this kernel, as the only two programming languages
+that target my CPU are my assembly language and my C-like programming languages.
+Mostly, this language just has tiny changes that I find more pleasant to work
+with.</p>
+<pre>Imagine there is a cool quote here.
+<a href="cat.jpg">My old cat.</a></pre>
 	</div>
 </body>
