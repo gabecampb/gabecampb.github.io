@@ -52,11 +52,11 @@ wouldn't be particularly optimized, you could absolutely develop 3D games on top
 of Piculet. If Piculet's whole feature set was implemented, you could even do
 ray tracing!
 
-## Zombie Game
+## Zombies Game
 
-This was a zombie FPS game which can be obtained <a href="https://github.com/gabecampb/zombie-game">here</a>.
-I developed it for a project in a university computer graphics course, and it is
-entertaining for a few minutes.
+This was a zombie FPS game which can be played <a href="zombies/index.html">here</a>.
+I developed it for a project in a university computer graphics course, and it
+entertains for a few minutes.
 
 It has some nice lighting, and basic animations on the zombie models. Tree
 leaves wave/deform in the wind by vertex displacement in the vertex shader.
