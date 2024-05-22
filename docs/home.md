@@ -14,8 +14,6 @@ currently working on. I've dabbled in many computer things over time, including
 OpenGL, software renderers, game engines, GBA development, compilers, Haskell,
 and Python.
 
-Lately, I've been learning about OS development.
-
 Long-time Linux user, yearning for BSD.
 
 ## Current Work
