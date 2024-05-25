@@ -75,9 +75,8 @@ it.
 
 This project requires a from-scratch approach, which I find to be a very fun
 challenge. There is no C in this kernel, as the only two programming languages
-that target my CPU are my assembly language and my C-like programming languages.
-Mostly, this language just has tiny changes that I find more pleasant to work
-with.
+that target my CPU are my assembly and my C-like language. Mostly, this language
+just has tiny changes that I find more pleasant to work with.
 
 <pre>Imagine there is a cool quote here.
 <a href="cat.jpg">My old cat.</a></pre>
