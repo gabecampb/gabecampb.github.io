@@ -52,7 +52,7 @@ ray tracing!
 
 ## Zombies Game
 
-This was a zombie FPS game which can be played <a href="zombies/index.html">here</a>.
+This was a zombie FPS game which can be played <a href="zombies">here</a>.
 I developed it for a project in a university computer graphics course, and it
 entertains for a few minutes.
 
