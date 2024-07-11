@@ -1,5 +1,3 @@
-### assembler.mov
-
 Hello! Welcome to my page.
 
 My name is Gabriel Campbell, a programmer with interests in graphics
@@ -80,6 +78,3 @@ just has tiny changes that I find more pleasant to work with.
 
 <pre>Imagine there is a cool quote here.
 <a href="cat.jpg">My old cat.</a></pre>
-
-
-
