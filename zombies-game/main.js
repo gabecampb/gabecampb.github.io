@@ -1,4 +1,3 @@
-"use strict";
 window.onload = init;
 
 var world_nodes = [];
