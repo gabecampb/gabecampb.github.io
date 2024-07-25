@@ -1,3 +1,5 @@
+"use strict";
+
 window.onload = init;
 
 var world_nodes = [];
@@ -114,10 +116,10 @@ function add_tree(pos) {
 	crown.wind_effect = true;
 
 	// assign textures
-	load_texture(trunk, "zombies-game/textures/trunk.jpg");
-	load_texture(root, "zombies-game/textures/leaves.jpg");
+	load_texture(trunk, "zombies/textures/trunk.jpg");
+	load_texture(root, "zombies/textures/leaves.jpg");
 	root.tex_scale = [5,5];
-	load_texture(crown, "zombies-game/textures/leaves.jpg");
+	load_texture(crown, "zombies/textures/leaves.jpg");
 	crown.tex_scale = [5,5];
 
 	world_nodes.push(root);
@@ -199,10 +201,10 @@ function init() {
 	add_tree([-9,.25,3]);
 	add_tree([-2,.25,-13]);
 
-	load_texture(base_node, "zombies-game/textures/grass.jpg");
+	load_texture(base_node, "zombies/textures/grass.jpg");
 	base_node.tex_scale = [10,10];
 
-	load_texture(reticle_node, "zombies-game/textures/reticle.png");
+	load_texture(reticle_node, "zombies/textures/reticle.png");
 	reticle_node.tex_scale = [1,1];
 
 	main_loop();
