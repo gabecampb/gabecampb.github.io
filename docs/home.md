@@ -27,8 +27,8 @@ compiler for my language is mostly complete but still being improved.
 ## Piculet
 
 This bytecode was a project that I worked on for several years. I eventually
-abandoned it to work on my current instruction set, which performs much faster
-and is better designed.
+moved on from it to work on my current instruction set, which performs much
+faster and is better designed.
 
 The repo for the project is <a
 href="https://github.com/gabecampb/piculet">here</a>. Most importantly, the
