@@ -27,12 +27,13 @@ projects in.
 bytecode; raster/RT/compute. <a href="https://github.com/gabecampb/piculet">GitHub</a>.
 Platform spec: <a href="https://github.com/gabecampb/piculet/blob/main/piculet029.pdf">GitHub</a>.
 
-**FreeBuild** - A <a href="https://github.com/gabecampb/freebuild">small game</a>
-I made. Didn't spend long on it but still fun to play around with.
+**FreeBuild** - A small brick-building game I made. Didn't spend long on it but
+still fun to play around with.
+<a href="https://github.com/gabecampb/freebuild">GitHub</a>.
 
-**Triangles, Step By Step** - A
-<a href="https://drive.google.com/file/d/1v4o__dAW4_Ot924uQ4GxrllszkroXe5N/view?usp=sharing">tutorial</a>
-I wrote many years ago about software rendering.
+**Triangles, Step by Step** - A tutorial I wrote many years ago about software
+rendering.
+<a href="https://drive.google.com/file/d/1v4o__dAW4_Ot924uQ4GxrllszkroXe5N/view?usp=sharing">Google Drive</a>.
 
 <p style="text-align:center">
     <a href="https://github.com/gabecampb">Visit my GitHub</a><br>
