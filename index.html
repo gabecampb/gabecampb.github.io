@@ -3,16 +3,16 @@
 <!DOCTYPE html>
 
 <head>
-<title>Assembler - A Programmer's Website</title>
+<title>ASSEMBLER.MOV</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
 
 	<style>
 		h3 { text-align: center; }
 		pre {
-			background: #B0B0B0;
-			font-family: "Noto Sans Mono";
+			background-color: #000000;
+			color: #FFFFFF;
 		}
 		img {
 			display: block;
@@ -24,57 +24,38 @@
 	</style>
 </head>
 
-<body style="color: #BBBBBB; background-color: #181818;">
-	<div style="width:50em;margin:auto;">
-		<a href="https://github.com/gabecampb" style="display:block;margin:auto">
-			<img src="pfp.jpg" style="width:50px;height:50px">
-		</a>
-		<h3 style="font-family:Noto Sans Mono">assembler.mov</h3>
-	</div>
-	<div
-		style="color:#000000;background-color:#C0C0C0;margin:auto;padding:2em;width:50em;font-family:Roboto Slab;box-shadow: 0 4px 20px 0 #000000">
-		<h1>Hello!</h1>
-<p>Welcome to my page. My name is Gabriel Campbell, a programmer with interests in
-web development, graphics programming, instruction sets, and OS development.</p>
-<h2>My Interests</h2>
-<p>I do various hobby projects, some detailed below. These tend to involve
-low-level things like CPU architectures or graphics programming in some way. Two
-of my biggest projects were the Piculet platform/bytecode, and the platform I'm
-currently working on. I've dabbled in many things over time, including OpenGL,
-software renderers, game engines, GBA development, compilers, Haskell, and
-Python.</p>
-<h2>virt</h2>
-<p>This is a project that I've been working on to create clean &amp; portable virtual
-SoC running a new RISC instruction set, with the long-term goal of making an
-operating system for it in my own programming language. This is not released yet
-but I plan to release it under MIT license when finished.</p>
-<p>The last feature that I still plan to design &amp; implement for this system is an
-integrated GPU, which you will be able to run via OpenGL or software rendering.
-Outside of this last feature, the emulator and assembler are complete. The
-compiler for my language is mostly complete but still being improved.</p>
-<h2>Piculet</h2>
-<p>This bytecode was a project that I worked on for several years. I eventually
-moved on from it to work on my current instruction set, which performs much
-faster and is better designed.</p>
-<p>The repo for the project is <a
-href="https://github.com/gabecampb/piculet">here</a>. Most importantly, the
-platform spec can be downloaded from
-<a href="https://github.com/gabecampb/piculet/blob/main/piculet029.pdf">here</a>.</p>
-<p>While you can tell some parts of it were designed by an amateur, Piculet was
-quite unique (and grand) in what it aimed to do. The goal was to create a
-platform that provides built-in, simple-as-possible interfaces for graphics,
-audio, networking, and more, through dedicated bytecode instructions. While they
-wouldn't be particularly optimized, you could absolutely develop 3D games on top
-of Piculet. If Piculet's whole feature set was implemented, you could even do
-ray tracing!</p>
-<h2>Other Projects</h2>
-<p><strong>Kernel</strong> - A WIP kernel for my new ISA. Quite Unix-like so far - eventually I
-want to make a simple OS. Written entirely in my own C-like language.</p>
-<p><strong>Zombies Game</strong> - A <a href="zombies">zombie FPS game</a> that I made in
-JavaScript and WebGL.</p>
-<p><strong>FreeBuild</strong> - A <a href="https://github.com/gabecampb/freebuild">small 3D game</a>
+<body style="color: #000000; background-color: #FFFFFF;">
+	<div style="width:80em; font-family:Noto Sans Mono; font-size:12px; margin:auto">
+	<h3>ASSEMBLER.MOV</h3>
+<p>Welcome to my little corner of the web. My name is Gabriel Campbell. I am a
+programmer.</p>
+<p>I do lots of stuff, but I'm primarily interested in operating systems and CPU
+architecture. Everything from graphics APIs, to GBA programming, to compiler
+development interests me. Aside from systems programming stuff, I am quite
+interested in biology. If you're bored, you can hop over to
+<a href="zombies">/zombies</a> to play a little WebGL zombie FPS that I
+<a href="https://github.com/gabecampb/zombies-game">wrote</a>.</p>
+<p>Currently, I'm working on userspace libraries for my hobby project OS and adding
+new features. I am also developing a GPU emulator to add into my CPU emulator
+(virt), so that I can have lovely 3D graphics and develop the first game for my
+OS.</p>
+<h3>Projects</h3>
+<p><strong>virt</strong> - Clean &amp; portable custom RISC ISA emulator. Not published yet, but
+likely will be under the MIT license.</p>
+<p><strong>Pier</strong> - My own C-like programming language, which I write all of my current
+projects in.</p>
+<p><strong>Piculet</strong> - Bytecode runtime environment for 2D/3D software + custom shader
+bytecode; raster/RT/compute. <a href="https://github.com/gabecampb/piculet">GitHub</a>.
+Platform spec: <a href="https://github.com/gabecampb/piculet/blob/main/piculet029.pdf">GitHub</a>.</p>
+<p><strong>FreeBuild</strong> - A <a href="https://github.com/gabecampb/freebuild">small game</a>
 I made. Didn't spend long on it but still fun to play around with.</p>
-<pre style="text-align: center">Make it work, make it right, make it fast.
-<a href="cat.jpg">My old cat.</a></pre>
+<p><strong>Triangles, Step By Step</strong> - A
+<a href="https://drive.google.com/file/d/1v4o__dAW4_Ot924uQ4GxrllszkroXe5N/view?usp=sharing">tutorial</a>
+I wrote many years ago about software rendering.</p>
+<p style="text-align:center">
+    <a href="https://github.com/gabecampb">Visit my GitHub</a><br>
+    <a href="cat.jpg">My old cat</a><br>
+    To contact me, please send all emails to /dev/null.
+</p>
 	</div>
 </body>

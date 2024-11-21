@@ -25,7 +25,7 @@ metadata_end = metadata_start + html[metadata_start:].index('\n')
 content_start = html.index("PAGE_CONTENT")
 content_end = content_start + html[content_start:].index('\n')
 
-metadata = "<title>Assembler - A Programmer's Website</title>"
+metadata = "<title>ASSEMBLER.MOV</title>"
 
 html = html[:metadata_start-1] + metadata + html[metadata_end:content_start-1] + content + html[content_end:]
 
