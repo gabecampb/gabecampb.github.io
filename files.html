@@ -112,37 +112,66 @@
 		</div>
 	</div>
 	<div id="textdiv" class="page-text">
-	<h3>ASSEMBLER.MOV</h3>
-<p>Welcome to my little corner of the web. My name is Gabriel Campbell. I am a
-programmer.</p>
-<p>I do lots of stuff, but I'm primarily interested in operating systems and CPU
-architecture. Everything from graphics APIs, to GBA programming, to compiler
-development interests me. Aside from systems programming stuff, I am quite
-interested in biology. If you're bored, you can hop over to
-<a href="zombies">/zombies</a> to play a little WebGL zombie FPS that I
-<a href="https://github.com/gabecampb/zombies-game">wrote</a>.</p>
-<p>Currently, I'm working on userspace libraries for my hobby project OS and adding
-new features. I am also developing a GPU emulator to add into my CPU emulator
-(virt), so that I can have lovely 3D graphics and develop the first game for my
-OS.</p>
-<h3>Projects</h3>
-<p><strong>virt</strong> - Clean &amp; portable custom RISC ISA emulator. Not published yet, but
-likely will be under the MIT license.</p>
-<p><strong>Pier</strong> - My own C-like programming language, which I write all of my current
-projects in.</p>
-<p><strong>Piculet</strong> - Bytecode runtime environment for 2D/3D software + custom shader
-bytecode; raster/RT/compute. <a href="https://github.com/gabecampb/piculet">GitHub</a>.
-Platform spec: <a href="https://github.com/gabecampb/piculet/blob/main/piculet029.pdf">GitHub</a>.</p>
-<p><strong>FreeBuild</strong> - A small brick-building game I made. Didn't spend long on it but
-still fun to play around with.
-<a href="https://github.com/gabecampb/freebuild">GitHub</a>.</p>
-<p><strong>Triangles, Step by Step</strong> - A tutorial I wrote many years ago about software
-rendering.
-<a href="https://drive.google.com/file/d/1v4o__dAW4_Ot924uQ4GxrllszkroXe5N/view?usp=sharing">Google Drive</a>.</p>
-<p style="text-align:center">
-    <a href="https://github.com/gabecampb">Visit my GitHub</a><br>
-    <a href="cat.jpg">My old cat</a><br>
-    To contact me, please send all emails to /dev/null.
-</p>
+	<h2>POSIX Files</h2>
+<p>This is just a short note about the POSIX files API, and doesn't cover all of
+the details.</p>
+<p>There are 5 operations implemented by the kernel: open, close, read, write,
+seek. These are made available to userspace via syscalls.</p>
+<p>Each process has a list of open files, which might look something like:</p>
+<pre>struct file {
+    int f_type;     // type (regular file? device file?)
+    int f_flags;    // flags provided at open()
+    int f_pos;      // current position in file, set by lseek()
+    int f_inode;    // inode number of open regular file
+    ... additional fields (e.g. if device file, the dev ID)
+};
+
+struct task {
+    // process fields
+    ...
+    file** file_list;   // pointers to objects in a kmem_cache for file structs
+    ...
+};</pre>
+
+<p>File descriptors are integers referring to an open file, and can be thought of
+as indices into the running process' file list. open returns a flie descriptor,
+close/read/write/seek takes one. The C library's fopen/fclose/fread/fwrite/fseek
+are abstractions of this interface, and pass around FILE structs, whose contents
+are implementation-defined but contain at minimum a file descriptor.</p>
+<p>The open() operation takes various flags bitwise OR'd together in an argument,
+the key ones being:</p>
+<ul>
+<li>
+<p><strong>O_RDONLY</strong> - can only be read</p>
+</li>
+<li>
+<p><strong>O_WRONLY</strong> - can only be written</p>
+</li>
+<li>
+<p><strong>O_RDWR</strong> - can be read or written</p>
+</li>
+<li>
+<p><strong>O_CREAT</strong> - create file if it doesn't exist, or open if it does</p>
+</li>
+<li>
+<p><strong>O_EXCL</strong> - if O_CREAT and the file exists, open() fails</p>
+</li>
+<li>
+<p><strong>O_TRUNC</strong> - truncate file to size 0 when opened</p>
+</li>
+<li>
+<p><strong>O_APPEND</strong> - before each write(), set f_pos to length of the file (1 past EOF)</p>
+</li>
+</ul>
+<p>Note that <strong>(O_RDONLY | O_WRONLY) != O_RDWR</strong> on <em>most</em> Unix-likes; each flag is
+defined as a unique bit. You must provide only 1 of the first 3 flags listed
+above when opening a file.</p>
+<p>Writing past the end of a file first expands the file. Reading past the end of a
+file reads back zeroes but doesn't affect file size.</p>
+<p>O_EXCL is necessary to avoid race conditions where you might try opening a file
+multiple times concurrently, and overwrite contents without noticing (especially
+if O_TRUNC is specified). open() acts atomically and performs that "file already
+exists" check that a multithreaded program may desire to do as part of a single
+operation.</p>
 	</div>
 </body>

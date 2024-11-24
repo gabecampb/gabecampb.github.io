@@ -9,6 +9,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
 
 	<style>
+		body {
+			color: #000000;
+			background-color: #FFFFFF;
+			font-family:Noto Sans Mono;
+			font-size:12px;
+		}
+
 		h3 { text-align: center; }
 		pre {
 			background-color: #000000;
@@ -21,11 +28,90 @@
 			box-shadow: 0 0 15px 0 black;
 		}
 		a { color: #5555BB; }
+		button {
+			background: none;
+			border: none;
+			padding: 0;
+			color: #000000;
+			text-decoration: underline;
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: bold;
+		}
+		button:hover {
+			cursor: pointer;
+		}
+
+		.nav {
+			float:left;
+			height:100%;
+			position:absolute;
+			border-right:1px solid #888888;
+			padding-right:5px;
+			display:block;
+			background:#FFFFFF;
+			z-index:1;
+		}
+		.page-text {
+			width:80em;
+			margin: auto;
+			overflow-x: auto;
+		}
 	</style>
+
+	<script>
+		let navHidden = false;
+
+		function viewportSet() {
+			var navDiv = document.getElementById('navdiv');
+			var textDiv = document.getElementById('textdiv');
+			var viewportWidth = window.innerWidth;
+			if(!navHidden && (viewportWidth - textDiv.offsetWidth) / 2 <
+				navDiv.offsetWidth)
+				textDiv.style.marginLeft = navDiv.offsetWidth + 'px';
+			else
+				textDiv.style.marginLeft = 'auto';
+		}
+
+		window.addEventListener('resize', viewportSet);
+
+		let navlinks_el = null;
+		function toggleNav() {
+			var navDiv = document.getElementById("navdiv");
+			var bn = document.getElementById("showButton");
+			var el = document.getElementById('navlinks');
+			if(el) {
+				navlinks_el = el;
+				el.remove();
+				navDiv.style.height = 'auto';
+
+				navHidden = true;
+				bn.textContent = 'Show';
+				viewportSet();
+			} else {
+				var navDiv = document.getElementById('navdiv');
+				navDiv.appendChild(navlinks_el);
+				navDiv.style.height = '100%';
+
+				navHidden = false;
+				bn.textContent = 'Hide';
+				viewportSet();
+			}
+		}
+	</script>
 </head>
 
-<body style="color: #000000; background-color: #FFFFFF;">
-	<div style="width:80em; font-family:Noto Sans Mono; font-size:12px; margin:auto">
+<body onload="viewportSet()">
+	<div id="navdiv" class="nav">
+		assembler.mov<br>
+		<button id="showButton" onclick="toggleNav()">Hide</button><br>
+		<br>
+		<div id="navlinks">
+			<a href="https://assembler.mov">Homepage</a><br>
+			<a href="https://assembler.mov/files">POSIX Files</a><br>
+		</div>
+	</div>
+	<div id="textdiv" class="page-text">
 		PAGE_CONTENT <!-- this line will be replaced by markdown content -->
 	</div>
 </body>
