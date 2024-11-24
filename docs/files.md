@@ -1,6 +1,6 @@
 ## POSIX Files
 
-This is just a short note about the POSIX files API, and doesn't cover all of
+This is just a short note about the POSIX files API, and it doesn't cover all of
 the details.
 
 There are 5 operations implemented by the kernel: open, close, read, write,
@@ -23,7 +23,7 @@ struct task {
 };</pre>
 
 File descriptors are integers referring to an open file, and can be thought of
-as indices into the running process' file list. open returns a flie descriptor,
+as indices into the running process' file list. open returns a file descriptor,
 close/read/write/seek takes one. The C library's fopen/fclose/fread/fwrite/fseek
 are abstractions of this interface, and pass around FILE structs, whose contents
 are implementation-defined but contain at minimum a file descriptor.

@@ -107,13 +107,13 @@
 		<button id="showButton" onclick="toggleNav()">Hide</button><br>
 		<br>
 		<div id="navlinks">
-			<a href="https://assembler.mov">Homepage</a><br>
-			<a href="https://assembler.mov/files">POSIX Files</a><br>
+			<a href="/">Homepage</a><br>
+			<a href="/files">POSIX Files</a><br>
 		</div>
 	</div>
 	<div id="textdiv" class="page-text">
 	<h2>POSIX Files</h2>
-<p>This is just a short note about the POSIX files API, and doesn't cover all of
+<p>This is just a short note about the POSIX files API, and it doesn't cover all of
 the details.</p>
 <p>There are 5 operations implemented by the kernel: open, close, read, write,
 seek. These are made available to userspace via syscalls.</p>
@@ -134,7 +134,7 @@ struct task {
 };</pre>
 
 <p>File descriptors are integers referring to an open file, and can be thought of
-as indices into the running process' file list. open returns a flie descriptor,
+as indices into the running process' file list. open returns a file descriptor,
 close/read/write/seek takes one. The C library's fopen/fclose/fread/fwrite/fseek
 are abstractions of this interface, and pass around FILE structs, whose contents
 are implementation-defined but contain at minimum a file descriptor.</p>
