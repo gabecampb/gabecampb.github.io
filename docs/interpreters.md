@@ -15,7 +15,7 @@ to advise you to be wary of anything that doesn't compile nearly 1:1 to assembly
 when writing an interpreter, for obvious reasons. Everything is LLVM these days
 so it shouldn't matter too much anyway.
 
-Now, lets see how to maximize instructions per second (IPS), relying heavily on
+Now, let's see how to maximize instructions per second (IPS), relying heavily on
 the almighty omnipresence of the compiler Gods.
 
 ## Tail those calls
