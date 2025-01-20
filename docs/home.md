@@ -1,7 +1,8 @@
 ### ASSEMBLER.MOV
 
 Welcome to my little corner of the web. My name is Gabriel Campbell. I am a
-programmer.
+programmer. 99% of my work and writings are non-public but I do hope to upload
+much of it here, eventually.
 
 I do lots of stuff, but I'm primarily interested in operating systems and CPU
 architecture. Everything from graphics APIs, to GBA programming, to compiler
