@@ -40,8 +40,8 @@ step, so at the start of each instruction function.
 
 Sometimes compilers can miss TCO, where it shouldn't. Maybe one reason is
 because we're technically doing an indirect function call indexed into the
-instruction function pointers array, not a direct call (which is an obvious)
-optimization.
+instruction function pointers array, not a direct call (which is an obvious
+optimization).
 
 In my experience, GCC never missed the TCO, but Clang has. Which sucks because
 in theory I like Clang more. There are compiler mnemonics to make sure that tail
