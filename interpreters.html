@@ -109,11 +109,11 @@
 		<div id="navlinks">
 			<a href="/">Homepage</a><br>
 			<a href="/files">POSIX Files</a><br>
-			<a href="/context">Tasks</a><br>
+			<a href="/interpreters">Interpreters</a><br>
 		</div>
 	</div>
 	<div id="textdiv" class="page-text">
-	<h3>Interpreters with the Efficiency IV Enchantment</h3>
+	<h2>Interpreters with the Efficiency IV Enchantment</h2>
 <h4>(Because efficiency V would be JIT.)</h4>
 <p>This is a generalized description of the tricks that I used to develop a fast
 interpreter loop for my emulator, using almost exclusively pure C in order to
@@ -158,12 +158,15 @@ pure C, without sacrificing functionality). Alas.</p>
 before fetching the next instruction. When an IRQ occurs, 'paused' is set - the
 tail call chain is then broken, exiting to the core loop where the reason
 'paused' was set is then determined and enter_isr() will be called.</p>
-<p>handle_int() will handle updating CPU state to correspond to having a new IRQ.</p>
+<p>handle_int() will handle updating CPU state to correspond to having a new IRQ.
+It is called every time a device wants to trigger a new IRQ, whenever the IRQ
+controller config is updated, and whenever the soft IRQ ("trap") instruction is
+executed.</p>
 <p>enter_isr() will handle actually transitioning into the ISR and updating CPU
 state accordingly. This involves pushing reti state, and then updating the PC
 and IRQ controller config.</p>
 <h2>Do not go into the syscall</h2>
-<p>System calls are great. Except for when you're making an interpreter. </p>
+<p>System calls are great. Except for when you want to go fast.</p>
 <p>Syscalls take some time. They also potentially (as happened in my case) break
 the precious TCO. clock_gettime() caused my emulator to slow greatly, even when
 the RTC wasn't being queried for the current time. There are also CPU timers

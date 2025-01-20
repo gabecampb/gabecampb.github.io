@@ -1,4 +1,4 @@
-### Interpreters with the Efficiency IV Enchantment
+## Interpreters with the Efficiency IV Enchantment
 #### (Because efficiency V would be JIT.)
 
 This is a generalized description of the tricks that I used to develop a fast
@@ -57,6 +57,9 @@ tail call chain is then broken, exiting to the core loop where the reason
 'paused' was set is then determined and enter_isr() will be called.
 
 handle_int() will handle updating CPU state to correspond to having a new IRQ.
+It is called every time a device wants to trigger a new IRQ, whenever the IRQ
+controller config is updated, and whenever the soft IRQ ("trap") instruction is
+executed.
 
 enter_isr() will handle actually transitioning into the ISR and updating CPU
 state accordingly. This involves pushing reti state, and then updating the PC
