@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+	PAGE_METADATA
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+			color: #000000;
+			background-color: #FFFFFF;
+			font-family:Noto Sans Mono;
+			font-size:12px;
+		}
+
+		h3 { text-align: center; }
+		pre {
+			background-color: #000000;
+			color: #FFFFFF;
+		}
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			box-shadow: 0 0 15px 0 black;
+		}
+		a { color: #5555BB; }
+		button {
+			background: none;
+			border: none;
+			padding: 0;
+			color: #000000;
+			text-decoration: underline;
+			font-family: inherit;
+			font-size: inherit;
+			font-weight: bold;
+		}
+		button:hover {
+			cursor: pointer;
+		}
+
+		.page-text {
+			width:80em;
+			margin: auto;
+			overflow-x: auto;
+		}
+	</style>
+</head>
+
+<body onload="viewportSet()">
+	<div id="textdiv" class="page-text">
+		PAGE_CONTENT <!-- this line will be replaced by markdown content -->
+	</div>
+</body>
